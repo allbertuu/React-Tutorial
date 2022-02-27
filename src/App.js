@@ -1,12 +1,14 @@
 import React from "react";
 import './App.css';
-import Welcome from "./components/Welcome";
-import imgWelcome from "./first.svg"
+import PageWelcome from "./components/PageWelcome";
+import Nome from "./components/Nome"
 
 class App extends React.Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            name: "",
+        }
     }
 
     changeName = () => {
@@ -16,36 +18,32 @@ class App extends React.Component {
         });
     }
 
+    handleInput = (e) => {
+        const val = e.target.value
+        this.setState({
+            name: val,
+        })
+    }
+
     render() {
-        if (!this.state.hasOwnProperty('name')) {
+        //if (!this.state.hasOwnProperty('name')) {
             return (
                 <main className="main">
                     <div>
                         <label for="nome">Insira seu nome:</label>
-                        <input id="nome"></input>
+                        <input onChange={this.handleInput} id="nome"></input>
+                    </div>
+                    <div>
+                        <Nome name={this.state.name} />
                     </div>
                     <div>
                         <button onClick={this.changeName} className="btn btn-sucess">Ok</button>
                     </div>
                 </main>
             );
-        } else {
-            if(this.state.name === "") {
-                return (
-                    <main className="main">
-                        <Welcome name="estranho" />
-                        <img src={imgWelcome}></img>
-                    </main>
-                )
-            } else {
-                return (
-                    <main className="main">
-                        <Welcome name={this.state.name} />
-                        <img src={imgWelcome}></img>
-                    </main>
-                )
-            }
-        }
+        //} else {
+        //    return <PageWelcome name={this.state.name}/>
+        //}
     }
 }
 

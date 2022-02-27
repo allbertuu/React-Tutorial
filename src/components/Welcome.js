@@ -1,9 +1,5 @@
 import React from "react";
-import '../App.css'; 
 
-/*const Welcome = props => {
-    return <h1>Olá, {props.name}!</h1>;
-}*/
 
 class Welcome extends React.Component {
     render() {
