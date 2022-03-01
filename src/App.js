@@ -1,8 +1,8 @@
 import React from "react";
 import './App.css';
 import Nome from "./components/Nome"
-import Welcome from "./components/Welcome";
-import imgWelcome from "./first.svg"
+//import Welcome from "./components/Welcome";
+//import imgWelcome from "./first.svg"
 
 class App extends React.Component {
     constructor() {
