@@ -1,4 +1,4 @@
-# Primeira página React 1️⃣
+# Login / entrada
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/first-page-react?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/allbertuu/first-page-react?style=for-the-badge)
