@@ -1,0 +1,21 @@
+.card-nome {
+    margin-top: 0.5rem;
+    transition: all ease 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 160px;
+    max-width: 230px;
+    word-break: break-word;
+}
+.nome {
+    font-weight: 600;
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.btn {
+    flex: 1 1 0;
+}
