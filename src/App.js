@@ -1,45 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
-import Nome from "./components/Nome"
+import SeuNome from './components/SeuNome';
 //import Welcome from "./components/Welcome";
-//import imgWelcome from "./first.svg"
+//import imgWelcome from "./imgWelcome.svg"
 
-class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {}
+const App = () => {
+
+    const handleInput = (e) => {
+        const val = e.target.value;
+        setName(val);
     }
 
-    changeName = () => {
-        let campo = document.getElementById('nome');
-        this.setState({
-            name: campo.value,
-        });
-    }
+    const [name, setName] = useState('');
 
-    handleInput = (e) => {
-        const val = e.target.value
-        this.setState({
-            name: val,
-        })
-    }
-
-    render() {
-        return (
-            <main className="main">
-                <div>
-                    <label for="nome">Insira seu nome:</label>
-                    <input onChange={this.handleInput} id="nome"></input>
-                </div>
-                <div>
-                    <Nome name={this.state.name} />
-                </div>
-                <div>
-                    <button onClick={this.changeName} className="btn btn-sucess">Ok</button>
-                </div>
-            </main>
-        )
-    }
+    return (
+        <main className="main">
+            <div>
+                <label for="nome">Insira seu nome:</label>
+                <input id="nome" className={name == '' ? 'invalido' : 'valido'} onChange={handleInput}></input>
+            </div>
+            {name !== '' &&
+                <SeuNome name={name}/>
+            }
+        </main>
+    )
 }
 
 export default App
