@@ -6,6 +6,11 @@ const Home = ({ setName, name }) => {
         setName(e.target.value)
     }
 
+    let clearInput = () => {
+        document.getElementById('nome').value = '';
+        setName('');
+    }
+
     return (
         <main className="main">
             <div>
@@ -13,7 +18,7 @@ const Home = ({ setName, name }) => {
                 <input id="nome" className={name === '' ? 'invalido' : 'valido'} onChange={handleInput}></input>
             </div>
             {name !== '' &&
-                <SeuNome name={name} />
+                <SeuNome name={name} clearInput={clearInput} />
             }
         </main>
     )
