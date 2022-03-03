@@ -16,7 +16,7 @@ const App = () => {
     return (
         <main className="main">
             <div>
-                <label for="nome">Insira seu nome:</label>
+                <label htmlFor="nome">Insira seu nome:</label>
                 <input id="nome" className={name === '' ? 'invalido' : 'valido'} onChange={handleInput}></input>
             </div>
             {name !== '' &&
