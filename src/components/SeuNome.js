@@ -2,7 +2,7 @@ import React from "react";
 import './SeuNome.css';
 import { Link } from "react-router-dom";
 
-export default ({ name }) => {
+const SeuNome = ({ name }) => {
     return (
         <div className="card card-nome">
             <h3>Seu nome é <span className="nome">{name}</span>?</h3>
@@ -13,3 +13,5 @@ export default ({ name }) => {
         </div>
     )
 }
+
+export default SeuNome
