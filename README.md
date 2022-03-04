@@ -3,7 +3,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/allbertuu/first-page-react?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/allbertuu/first-page-react?style=for-the-badge)
 
-> 1️⃣ Primeiro projeto simples envolvendo a tecnologia **ReactJS**.
+> 1️⃣ Projeto simples envolvendo a tecnologia **ReactJS** com conceitos relevantes.
 
 ## 💻 Tecnologias usadas
 - ReactJS
