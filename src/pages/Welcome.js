@@ -5,7 +5,7 @@ const Welcome = ({ name }) => {
     return (
         <div className='main'>
             <div className="card">
-                <h1>Olá, <span className='nomeWelcome'>{name}</span>! <br /> <span className='italic'>Seja bem vindo!</span></h1>
+                <h1>Olá, <span className='nomeWelcome'>{name}</span>! <br /> <span className='italic'>Seja bem vindo(a)!</span></h1>
             </div>
             <img src={imgWelcome} alt='Imagem de boas vindas'/>
         </div>
